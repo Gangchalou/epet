@@ -49,7 +49,10 @@
           </div>
         </div>
       </div>
-
+      <!--切站点-->
+      <div class="qiezhandian">
+        <img src="./image_2/godog.png" alt="godog">
+      </div>
       <!--滚动内容区-->
       <div class="index_move">
         <!--轮播-->
@@ -92,11 +95,11 @@
             <div class="surprise_left">
               <img src="./image_2/new_index_icon_suprice.png" alt="surprise">
               <div class="get_time">
-                <p>下一场开始</p>
-                <div>
-                  <span class="time1"></span>
-                  <span class="time_gap"></span>
-                  <span class="time2"></span>
+                <div class="xyc">下一场开始</div>
+                <div class="show_time">
+                  <span class="time1">00</span>
+                  <span class="time_gap"> : </span>
+                  <span class="time2">10</span>
                 </div>
               </div>
             </div>
@@ -107,10 +110,116 @@
             </div>
           </div>
         </div>
-
-
-
-
+        <!--轮播-->
+        <div class="banner1">
+          <div class="swiper-container" ref="ban1">
+            <div class="swiper-wrapper" >
+              <div class="swiper-slide"><img src="./image_2/3403dd29475e489f6d647a4f6f256b9d.jpg" alt="aaa"></div>
+              <div class="swiper-slide"><img src="./image_2/3bef69f3c9a13b3c7ce347f0d027df9d.jpg" alt="aaa"></div>
+              <div class="swiper-slide"><img src="./image_2/3403dd29475e489f6d647a4f6f256b9d.jpg" alt="aaa"></div>
+              <div class="swiper-slide"><img src="./image_2/3bef69f3c9a13b3c7ce347f0d027df9d.jpg" alt="aaa"></div>
+            </div>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <!--currency-->
+        <div class="currency">
+          <div class="currncy_left">
+            <img src="./image_2/1ec9379f83eb421db9a09195c9594e29.jpg" alt="left">
+          </div>
+          <div class="currncy_right">
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right1">
+            </div>
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right2">
+            </div>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <div class="a">
+          <img src="./image_2/1ef6fbbba6b6a8d5029afb3a458af72a.jpg" alt="item">
+        </div>
+        <div class="gap"></div>
+        <!--潮品-->
+        <div class="fashion">
+          <div class="custom">
+            <div class="custom_left">
+              <img src="./image_2/38688d8d92c7da7aae64eda8b8bb3a94.jpg" alt="cunstom1">
+            </div>
+            <div class="custom_right">
+              <img src="./image_2/0855ecf27a6ca47b32170caab2503ddd.jpg" alt="cunstom2">
+            </div>
+          </div>
+          <div class="pic">
+            <img src="./image_2/61023e6ce2a6fb3f198400747eccf4b0.jpg" alt="s">
+          </div>
+          <div class="disc">
+            <p> asdasfrfr 缓解狗子拉稀</p>
+            <p>缓解狗子拉稀</p>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <div class="currency">
+          <div class="currncy_left">
+            <img src="./image_2/1ec9379f83eb421db9a09195c9594e29.jpg" alt="left">
+          </div>
+          <div class="currncy_right">
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right1">
+            </div>
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right2">
+            </div>
+          </div>
+        </div>
+        <div class="fashion">
+          <div class="custom">
+            <div class="custom_left">
+              <img src="./image_2/38688d8d92c7da7aae64eda8b8bb3a94.jpg" alt="cunstom1">
+            </div>
+            <div class="custom_right">
+              <img src="./image_2/0855ecf27a6ca47b32170caab2503ddd.jpg" alt="cunstom2">
+            </div>
+          </div>
+          <div class="pic">
+            <img src="./image_2/61023e6ce2a6fb3f198400747eccf4b0.jpg" alt="s">
+          </div>
+          <div class="pic">
+            <img src="./image_2/61023e6ce2a6fb3f198400747eccf4b0.jpg" alt="s">
+          </div>
+          <div class="pic">
+            <img src="./image_2/61023e6ce2a6fb3f198400747eccf4b0.jpg" alt="s">
+          </div>
+          <div class="disc">
+            <p> asdasfrfr 缓解狗子拉稀</p>
+            <p>缓解狗子拉稀</p>
+          </div>
+        </div>
+        <div class="currency">
+          <div class="currncy_left">
+            <img src="./image_2/1ec9379f83eb421db9a09195c9594e29.jpg" alt="left">
+          </div>
+          <div class="currncy_right">
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right1">
+            </div>
+            <div>
+              <img src="./image_2/6c2998af853e701a2f884b92066058e5.jpg" alt="right2">
+            </div>
+          </div>
+        </div>
+        <div class="footer_bar">
+          <div class="footer_top">
+            <p>触屏版</p>
+            <p>触屏版</p>
+            <p>触屏版</p>
+            <p>触屏版</p>
+          </div>
+          <div class="footer_bottom">
+            <p>© wap.epet.com 版权：重庆易宠科技有限公司</p>
+          </div>
+        </div>
 
 
 
@@ -143,17 +252,24 @@
         slidesPerView: 4,
         spaceBetween:5,
       });
+      /*banner*/
       new Swiper(this.$refs.ban, {
         spaceBetween: 30,
         centeredSlides: true,
+        loop: true,
         autoplay: {
-          delay: 3500,
+          delay: 1500,
           disableOnInteraction: false,
         },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         }
+      });
+      /*banner1*/
+      new Swiper(this.$refs.ban1, {
+        slidesPerView: 3.5,
+        spaceBetween:1,
       });
     },
 
@@ -171,14 +287,13 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-
-
   @import './css/swiper.css'
 
   .swiper-pagination-bullet-active
     width 16px
     border-radius 8px
     background: #fff;
+
 
   .home
     width: 100%
@@ -217,6 +332,7 @@
       position relative
       width 100%
       padding-top 55px
+      height 2900px
       .index_header
         position fixed
         width 100%
@@ -286,12 +402,25 @@
 
 
       /*内容区*/
+      .qiezhandian
+        position fixed
+        right 0
+        top 500px
+        width: 41px
+        height: 46px
+        z-index 100
+        img
+          height: 100%
+          @keyframes mydog
+            0%  left 0px
+          50%  left -41px
+          animation:mydog 1s steps(1) infinite
+
+      /*滑动区*/
       .index_move
         padding-top 88px
         width 100%
-        height 1000px
         overflow hidden
-        background: darkgray;
         .banner
           width 100%
           height 160px
@@ -304,8 +433,6 @@
               background #fff
               img
                 width: 100%
-
-
         .menu
           width: 100%
           height: 180px
@@ -330,19 +457,154 @@
         .surprise
           width: 100%
           height: 39.2px
-          background: red;
           .surprise_box
-            margin 10px auto
+            padding-top 10px
             width 100%
             height 19.2px
             display flex
             .surprise_left
               flex 6
               height 19.2px
-              background darkcyan
+              img
+                float left
+                display block
+                height 100%
+                margin-left 10px
+              .get_time
+                width 40%
+                float right
+                .xyc
+                  margin-top 3px
+                  font-size 16px
+                  float left
+                .show_time
+                  .time1,.time2
+                    display inline-block
+                    border 1px solid #ddd
+                    width: 19px
+                    height: 19px
+                  span
+                    float right
+
             .surprise_right
               flex 1
-              height 19.2px
-              background saddlebrown
+              .surprise_more
+                width 100%
+                transform translateY(-5px)
+                img
+                  display block
+                  height 30px
+
+
+
+        .banner1
+          width 100%
+          height 130px
+          .swiper-container
+            width 100%
+            height 100%
+            .swiper-slide
+              text-align center
+              font-size 18px
+              background #fff
+              img
+                width: 100%
+
+        .currency
+          width: 100%
+          height: 250px
+          display flex
+          .currncy_left
+            flex 1
+            width: 50%
+            height: 100%
+            background deeppink
+            img
+              display block
+              width: 100%
+              height: 100%
+          .currncy_right
+            flex 1
+            width: 50%
+            height: 100%
+            div
+              width: 100%
+              height: 50%
+              img
+                display block
+                width: 100%
+                height: 100%
+        .gap
+          width 100%
+          height 10px
+          /*background #f3f4f5*/
+          background: gold;
+        .a
+          width: 100%
+          height: 160px
+          img
+            display: block
+            width: 100%
+            height: 100%
+
+        .fashion
+          width: 100%
+          .custom
+            width: 100%
+            height: 72px
+            display flex
+            background: #fff;
+            .custom_left
+              width: 50%
+              height 100%
+              img
+                display block
+                float left
+                height: 100%
+            .custom_right
+              width: 50%
+              height 100%
+              img
+                display block
+                float right
+                height 100%
+
+          .pic
+            width: 100%
+            height: 211px
+            img
+              display block
+              width: 100%
+
+
+          .disc
+            width: 100%
+            height: 56px
+            p
+              padding 6px
+              text-align center
+
+
+
+        .footer_bar
+          width: 100%
+          height: 86px
+          .footer_top
+            width: 100%
+            height: 44px
+            display flex
+            p
+              text-align center
+              line-height 44px
+              flex 1
+          .footer_bottom
+            width: 100%
+            height: 42px
+            p
+              font-size 12px
+              text-align center
+              line-height 20px
+
+
 
 </style>
