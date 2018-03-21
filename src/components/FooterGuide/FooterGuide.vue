@@ -7,7 +7,7 @@
     </div>
     <div class="guide_item" >
       <div class="item_icon">
-        <a href="javascript:;" class="bg2" @click="goto('/class')" :class="{on:$route.path === '/class'}"></a>
+        <a href="javascript:;" class="bg2" @click="goto('/class')" :class="{on:$route.path === '/class' || $route.path === '/class/classer' }"></a>
       </div>
     </div>
     <div class="guide_item" >

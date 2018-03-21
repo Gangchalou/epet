@@ -29,7 +29,7 @@ export default new VueRouter({
           component: Classer,
         },
         {
-          path: '/class/brand',
+          path: '/brand/brand',
           component: Brand,
         },
         {

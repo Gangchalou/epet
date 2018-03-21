@@ -1,170 +1,28 @@
 <template>
- <!-- <div class="categorybox">
+  <div class="categorybox">
     <div class="header">
-      <div class="header_left " >
-        <a href="javascript:;" >分类</a>
-      </div>
-      <div class="header_right on">
-        <a href="javascript:;">品牌</a>
-        <img src="./images/search-ico.png" alt="search">
-      </div>
-    </div>
-    <div class="container">
-      <div class="container_left" ref="wrap_ref1">
-        <ul>
-          <li>杨键杨键</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>狗狗主梁</li>
-          <li>杨键杨键</li>
-        </ul>
-      </div>
-
-      <div class="container_right" ref="wrap_ref2">
-        <div class="list_name">
-          <div class="name_all">
-            <div class="name_all_innerbox">
-              狗狗主粮
-              <img src="./images/cate_right_img.png" alt="more">
-            </div>
-          </div>
-
-          <div class="list_name_container">
-            <ul>
-              <li>
-                <img src="./images/f38b8a4245c34c33061d04ad1e8009dd.jpg" alt="pic">
-                <p>进口狗粮</p>
-              </li>
-              <li>
-                <img src="./images/f38b8a4245c34c33061d04ad1e8009dd.jpg" alt="pic">
-                <p>进口狗粮</p>
-              </li>
-              <li>
-                <img src="./images/f38b8a4245c34c33061d04ad1e8009dd.jpg" alt="pic">
-                <p>进口狗粮</p>
-              </li>
-              <li>
-                <img src="./images/f38b8a4245c34c33061d04ad1e8009dd.jpg" alt="pic">
-                <p>进口狗粮</p>
-              </li>
-
-
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="list_brand">
-          <div class="brand_innerbox">
-            <div class="brand_name">热门品牌</div>
-            <div class="brand_cotainer">
-              <ul>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="brand_img">
-                    <img src="./images/ec41f0dc6478fd51ffe733c6cba49592.jpg" alt="img">
-                    </div>
-                    <p>纽萃宝NUTRIPE</p>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
-  <div>
-    <div class="tab">
-      <div class="tab-item">
+      <div class="header_left">
         <a href="javascript:;">
           <router-link to="/class/classer" replace>分类</router-link>
         </a>
       </div>
 
-      <div class="tab-item">
+      <div class="header_right">
         <a href="javascript:;">
           <router-link to="/brand/brand" replace>品牌</router-link>
         </a>
+        <img src="./images/search-ico.png" alt="search">
       </div>
-    </div>
-  </div>
 
+
+    </div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
-  import Bscroll from 'better-scroll'
 
-//  export default {
-//    mounted() {
-//      this.$nextTick(() => {
-//        this.scroll = new Bscroll(this.$refs.wrap_ref1, {})
-//      })
-//      this.$nextTick(() => {
-//        this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
-//      })
-//    },
-
-//    components: {
-//      ClassBrand
-//    }
-
-
-
+  export default {
   }
 </script>
 
@@ -332,28 +190,56 @@
 
 
 */
+  @import "../../common/stylus/mixins.styl"
 
+  .categorybox
+    width: 100%
+    height: 100%
+    background: #fff;
+    .header
+      position fixed
+      z-index 10
+      width: 100%
+      height: 40px
+      display flex
+      background: #fff;
+      box-shadow: 0 1px 1px #888888;
+      .header_left
+        flex 1
+        width: 50%
+        height: 100%
+        a
+          display block
+          float right
+          line-height 40px
+          padding 0 10px
+          font-size 13px
+          color #333
+          &.router-link-active
+            color #DC143C
+            border-bottom 2px solid red
 
- .tab
-   height 40px
-   line-height 40px
-   bottom-border-1px(rgba(7, 17, 27, 0.1))
-   /*.tab-item
-     float left
-     width: 50%
-     text-align center
-     font-size 14px
-     color rgb(77, 85, 93)
-     a
-       display block
-       &.router-link-active
-         color #02a774*/
+      .header_right
+        flex 1
+        width: 50%
+        height: 100%
+        a
+          padding 0 10px
+          display block
+          float left
+          line-height 40px
+          font-size 13px
+          color #333
+          &.router-link-active
+            color #DC143C
+            border-bottom 2px solid red
 
-
-
-
-
-
+        img
+          float right
+          padding 13px 15px
+          display block
+          width: 14px
+          height: 14px
 
 
 
