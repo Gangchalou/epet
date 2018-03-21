@@ -1,11 +1,11 @@
 <template>
-  <div class="categorybox">
+ <!-- <div class="categorybox">
     <div class="header">
-      <div class="header_left">
-        <p>分类</p>
+      <div class="header_left " >
+        <a href="javascript:;" >分类</a>
       </div>
-      <div class="header_right">
-        <p>品牌</p>
+      <div class="header_right on">
+        <a href="javascript:;">品牌</a>
         <img src="./images/search-ico.png" alt="search">
       </div>
     </div>
@@ -127,25 +127,49 @@
         </div>
       </div>
     </div>
+  </div>-->
+  <div>
+    <div class="tab">
+      <div class="tab-item">
+        <a href="javascript:;">
+          <router-link to="/class/classer" replace>分类</router-link>
+        </a>
+      </div>
+
+      <div class="tab-item">
+        <a href="javascript:;">
+          <router-link to="/brand/brand" replace>品牌</router-link>
+        </a>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
   import Bscroll from 'better-scroll'
-  export default {
-    mounted() {
-      this.$nextTick(() => {
-        this.scroll = new Bscroll(this.$refs.wrap_ref1, {})
-      })
-      this.$nextTick(() => {
-        this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
-      })
-    }
+
+//  export default {
+//    mounted() {
+//      this.$nextTick(() => {
+//        this.scroll = new Bscroll(this.$refs.wrap_ref1, {})
+//      })
+//      this.$nextTick(() => {
+//        this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
+//      })
+//    },
+
+//    components: {
+//      ClassBrand
+//    }
+
+
+
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .categorybox
+  /*.categorybox
     width: 100%
     height: 100%
     background: #fff;
@@ -161,18 +185,28 @@
         flex 1
         width: 50%
         height: 100%
-        p
+        &.on
+          color #DC143C
+          border-bottom 2px solid  #DC143C
+        a
+          display block
           float right
           line-height 40px
           padding-right 10px
+
       .header_right
         flex 1
         width: 50%
         height: 100%
-        p
+        &.on
+          color #DC143C
+          border-bottom 2px solid  #DC143C
+        a
+          display block
           float left
           line-height 40px
           padding-left 10px
+
         img
           float right
           padding 13px 15px
@@ -297,8 +331,23 @@
 
 
 
+*/
 
 
+ .tab
+   height 40px
+   line-height 40px
+   bottom-border-1px(rgba(7, 17, 27, 0.1))
+   /*.tab-item
+     float left
+     width: 50%
+     text-align center
+     font-size 14px
+     color rgb(77, 85, 93)
+     a
+       display block
+       &.router-link-active
+         color #02a774*/
 
 
 

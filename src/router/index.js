@@ -5,6 +5,8 @@ import Msite from  '../pages/Msite/Msite.vue'
 import Class from  '../pages/Class/Class.vue'
 import ShopCart from  '../pages/ShopCart/ShopCart.vue'
 import Profile from  '../pages/Profile/Profile.vue'
+import Classer from '../pages/Class/Classer/Classer.vue'
+import Brand from '../pages/Class/Brand/Brand.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,20 @@ export default new VueRouter({
     {
       path: '/class',
       component: Class,
+      children: [
+        {
+          path: '/class/classer',
+          component: Classer,
+        },
+        {
+          path: '/class/brand',
+          component: Brand,
+        },
+        {
+          path: '/',
+          redirect:'/class/classer'
+        },
+      ]
     },
     {
       path: '/shopcart',
