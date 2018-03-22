@@ -60,19 +60,159 @@
             <p>冠能</p>
             <p>美国</p>
           </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
         </ul>
       </div>
+    </div>
+    <div class="brand_box">
+      <div class="box_header">
+        <span>—— 推荐品牌 ——</span>
+      </div>
+      <div class="box_container">
+        <ul>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="all">
+      <a href="javascript:;" @click="goto('/all')" :class="{on:$route.path === '/all'}">全部</a>
     </div>
   </div>
 </template>
 
 <script>
-//  import Bscroll from 'better-scroll'
 
   export default {
-    mounted() {
-
-    }
+    methods: {
+      goto(path) {
+        this.$router.replace(path)
+      }
+    },
   }
 </script>
 
@@ -80,9 +220,10 @@
   .brand
     width: 100%
     padding-top 40px
+    overflow hidden
     .brand_box
       width: 100%
-      height 300px
+
       .box_header
         padding-top 20px
         width: 100%
@@ -96,15 +237,18 @@
 
       .box_container
         width 100%
-        background darkgray
+        background #f3f4f5
         ul
           margin 0 auto
-          width: 365px
+          width: 100%
+          background #fff
+          overflow hidden
+          padding-top 10px
+          margin-bottom 10px
           li
             float left
             width: 33.33%
             height 107px
-            padding-bottom 10px
             a
               padding-top 10px
 
@@ -128,4 +272,19 @@
               white-space: nowrap;
 
 
+
+    .all
+      text-align center
+      width: 40px;
+      height: 40px;
+      right 0
+      bottom: 65px;
+      position: fixed;
+      z-index: 10;
+      background: rgba(0,0,0,.4);
+      line-height: 40px;
+      border-radius: 50%;
+      a
+        color #fff
+        font-size 12px
 </style>

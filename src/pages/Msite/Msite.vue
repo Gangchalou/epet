@@ -234,6 +234,7 @@
 
 <script>
   import Swiper from 'swiper'
+  import {mapState} from 'vuex'
 
 
   export default {
@@ -243,8 +244,8 @@
 
       }
 
-
     },
+
     mounted(){
       new Swiper(this.$refs.nav, {
         slidesPerView: 4,
@@ -269,8 +270,9 @@
         slidesPerView: 3.5,
         spaceBetween:1,
       });
-    },
 
+      this.$store.dispatch('getHomepage')
+    },
 
 
     methods: {
@@ -280,6 +282,9 @@
         },
       },
 
+    computed: {
+      ...mapState(['homepage'])
+    }
 
     }
 </script>

@@ -7,9 +7,10 @@
     </div>
     <div class="guide_item" >
       <div class="item_icon">
-        <a href="javascript:;" class="bg2" @click="goto('/class')" :class="{on:$route.path === '/class' || $route.path === '/class/classer' }"></a>
+        <a href="javascript:;" class="bg2" @click="goto('/class')" :class="{on:$route.path === '/class' || $route.path === '/class/classer' || $route.path === '/brand/brand' }"></a>
       </div>
     </div>
+
     <div class="guide_item" >
       <div class="item_icon">
         <a href="javascript:;" class="bg3 " @click="goto('/shopcart')" :class="{on:$route.path === '/shopcart'}"></a>
@@ -31,6 +32,7 @@
       }
     }
   }
+
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
