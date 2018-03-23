@@ -35,6 +35,7 @@
              </div>
            </div>
 
+
            <div class="list_name_container">
              <ul>
                <li>
@@ -59,6 +60,7 @@
 
            </div>
          </div>
+
          <div class="list_brand">
            <div class="brand_innerbox">
              <div class="brand_name">热门品牌</div>
@@ -183,13 +185,24 @@
 
   export default {
     mounted() {
-      this.$nextTick(() => {
+      /*this.$nextTick(() => {
         this.scroll = new Bscroll(this.$refs.wrap_ref1, {})
-      }),
+      }),*/
       this.$nextTick(() => {
         this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
       }),
-      this.$store.dispatch('getCategorys')
+
+      this.$store.dispatch('getCategorys',()=>{
+        this.$nextTick(() => {
+          this.scroll = new Bscroll(this.$refs.wrap_ref1, {})
+        })
+      })
+
+     /* this.$store.dispatch('getCategorys',()=>{
+        this.$nextTick(() => {
+          this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
+        })
+      })*/
     },
     computed: {
       ...mapState(['categorys'])

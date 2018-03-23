@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <transition name="fade">
     <div class="menu_box">
       <div class="box_inner">
         <a href="javascript:;">
@@ -20,7 +20,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -36,11 +36,19 @@
 <style lang="stylus" rel="stylesheet/stylus">
   .menu_box
     width 100%
-    height 68px
-    background: #fff;
+    height 58px
+    background #fff
     border-bottom 1px solid #d7d7d7
-    /*transition 0.5s */
+    overflow hidden
+      //描述动画过程
+    &.fade-enter-active,&.fade-leave-active
+      transition all .3s linear
+      //描述进入之前和离开之后的状态
+    &.fade-enter,&.fade-leave-to
+      height  0
+
     .box_inner
+      top 5px
       width 100%
       height 58px
       a

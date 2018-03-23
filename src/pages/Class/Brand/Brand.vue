@@ -1,6 +1,6 @@
 <template>
   <div class="brand" v-if="brand">
-    <div class="brand_box" v-for="(brand,index) in brand.list" :key="index">
+    <div class="brand_box" v-for="(brand,index) in brand" :key="index">
       <div class="box_header">
         <span>—— {{brand.title}} ——</span>
       </div>
@@ -215,7 +215,7 @@
       }
     },
     mounted(){
-      this.$store.dispatch('getBrand')
+      this.$store.dispatch('getBrand' )
     },
     computed: {
       ...mapState(['brand'])

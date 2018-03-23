@@ -20,18 +20,30 @@ export default new VueRouter({
     {
       path: '/msite',
       component:Msite,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/class',
       component: Class,
+      meta: {
+        showFooter: true
+      },
       children: [
         {
           path: '/class/classer',
           component: Classer,
+          meta: {
+            showFooter: true
+          }
         },
         {
           path: '/brand/brand',
           component: Brand,
+          meta: {
+            showFooter: true
+          }
         },
         {
           path: '/',
