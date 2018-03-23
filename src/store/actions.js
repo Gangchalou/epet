@@ -27,7 +27,7 @@ export default {
   async getAllbrands({commit}, cb) {
     const result = await reqAllbrands()
     if(result.code===0) {
-      const Allbrands = result.data
+      const allbrands = result.data
       commit(RECEIVE_ALLBRANDS, {allbrands})
       // 如果组件中传递了接收消息的回调函数, 数据更新后, 调用回调通知调用的组件
       cb && cb()
@@ -37,7 +37,7 @@ export default {
   async getCategorys({commit}, cb) {
     const result = await reqCategorys()
     if(result.code===0) {
-      const Homepage = result.data
+      const categorys = result.data
       commit(RECEIVE_CATEGORYS, {categorys})
       // 如果组件中传递了接收消息的回调函数, 数据更新后, 调用回调通知调用的组件
       cb && cb()

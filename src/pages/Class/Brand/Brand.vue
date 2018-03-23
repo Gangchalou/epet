@@ -1,8 +1,107 @@
 <template>
-  <div class="brand">
-    <div class="brand_box">
+  <div class="brand" v-if="brand">
+    <div class="brand_box" v-for="(brand,index) in brand.list" :key="index">
       <div class="box_header">
-        <span>—— 推荐品牌 ——</span>
+        <span>—— {{brand.title}} ——</span>
+      </div>
+      <div class="box_container" >
+        <ul>
+          <li v-for="(list,index) in brand.list" :key="index">
+            <a href="javascript:;">
+              <div>
+                <img :src="list.logo" alt="pic">
+              </div>
+            </a>
+            <p>{{list.name}}</p>
+            <p>{{list.address}}</p>
+          </li>
+          <!--<li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div>
+                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
+              </div>
+            </a>
+            <p>冠能</p>
+            <p>美国</p>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+    <!--<div class="brand_box">
+      <div class="box_header">
+        <span>—— 主梁品牌 ——</span>
       </div>
       <div class="box_container">
         <ul>
@@ -98,106 +197,7 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="brand_box">
-      <div class="box_header">
-        <span>—— 推荐品牌 ——</span>
-      </div>
-      <div class="box_container">
-        <ul>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <div>
-                <img src="../images/87feaa80f9fbed84c37a7b07da6324a1.jpg" alt="pic">
-              </div>
-            </a>
-            <p>冠能</p>
-            <p>美国</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </div>-->
 
     <div class="all">
       <a href="javascript:;" @click="goto('/all')" :class="{on:$route.path === '/all'}">全部</a>
@@ -206,6 +206,7 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
 
   export default {
     methods: {
@@ -213,6 +214,15 @@
         this.$router.replace(path)
       }
     },
+    mounted(){
+      this.$store.dispatch('getBrand')
+    },
+    computed: {
+      ...mapState(['brand'])
+    }
+
+
+
   }
 </script>
 

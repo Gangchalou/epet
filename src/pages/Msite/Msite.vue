@@ -34,10 +34,12 @@
           </div>
         </div>
         <!--导航条-->
-        <div class="swiper-container" ref="nav">
+        <div class="swiper-container" ref="nav" v-if="homepage.menus">
           <div class="swiper-wrapper" >
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide" v-for="(menus, index) in homepage.menus" :key="index">
+              {{menus.menu_name}}
+            </div>
+            <!--<div class="swiper-slide">Slide 2</div>
             <div class="swiper-slide">Slide 3</div>
             <div class="swiper-slide">Slide 4</div>
             <div class="swiper-slide">Slide 5</div>
@@ -45,7 +47,7 @@
             <div class="swiper-slide">Slide 7</div>
             <div class="swiper-slide">Slide 8</div>
             <div class="swiper-slide">Slide 9</div>
-            <div class="swiper-slide">Slide 10</div>
+            <div class="swiper-slide">Slide 10</div>-->
           </div>
         </div>
       </div>
@@ -393,12 +395,13 @@
           width 100%
           height 36px
           .swiper-wrapper
-            width: 100%
             height: 36px
             .swiper-slide
+              width 74.5px
               text-align center
               line-height 36px
-              /*font-size 18px*/
+              font-size 14px
+              color #666
               background #fff
 
 

@@ -1,8 +1,11 @@
 <template>
    <div class="container">
-     <div class="container_left" ref="wrap_ref1">
+     <div class="container_left" ref="wrap_ref1" v-if="categorys">
        <ul>
-         <li>杨键杨键</li>
+         <li v-for="(categorys, index) in categorys" :key="index">
+          {{categorys.name}}
+         </li>
+        <!-- <li>狗狗主梁</li>
          <li>狗狗主梁</li>
          <li>狗狗主梁</li>
          <li>狗狗主梁</li>
@@ -18,8 +21,7 @@
          <li>狗狗主梁</li>
          <li>狗狗主梁</li>
          <li>狗狗主梁</li>
-         <li>狗狗主梁</li>
-         <li>杨键杨键</li>
+         <li>杨键杨键</li>-->
        </ul>
      </div>
 
@@ -177,6 +179,7 @@
 
 <script>
  import Bscroll from 'better-scroll'
+ import {mapState} from 'vuex'
 
   export default {
     mounted() {
@@ -185,8 +188,12 @@
       }),
       this.$nextTick(() => {
         this.scroll = new Bscroll(this.$refs.wrap_ref2, {})
-      })
+      }),
+      this.$store.dispatch('getCategorys')
     },
+    computed: {
+      ...mapState(['categorys'])
+    }
 
   }
 </script>
@@ -275,6 +282,7 @@
               display table-cell
               vertical-align bottom
               color #999
+              font-size 12px
 
             .brand_cotainer
               overflow hidden
