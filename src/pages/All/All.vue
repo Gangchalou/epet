@@ -5,7 +5,11 @@
       <p>全部商品</p>
       <span class="menu" @click="menuShow" ></span>
     </div>
-    <TopMenu v-show="isShow"/>
+
+    <transition name="slideSade">
+      <TopMenu class="show" v-show="isShow"/>
+    </transition>
+
     <div class="container">
       内容
     </div>
@@ -20,7 +24,6 @@
       return{
         isShow:false
       }
-
 
     },
 
@@ -73,6 +76,15 @@
         right: 10px;
         outline: 0;
 
+
+    .show
+      //描述动画过程
+      &.slideSade-enter-active,&.slideSade-leave-active
+        transition height  1s liner
+        //描述进入之前和离开之后的状态
+      &.slideSade-enter,&.slidefade-leave-to
+        height 0
+        
     .container
       padding 0
       width: 100%

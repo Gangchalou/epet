@@ -61,11 +61,13 @@
         <div class="banner">
           <div class="swiper-container" ref="ban">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./image_2/94d4681e2ab878c340d441a5c1c7b98a.jpg" alt="pic"></div>
-              <div class="swiper-slide"><img src="./image_2/d945d3f1b34e0081cf8c9eb34def9096.jpg" alt="pic"></div>
+              <div class="swiper-slide" v-for="(dog_banner, index ) in homepage.dog_banner" :key="index">
+                <img :src="dog_banner" alt="pic">
+              </div>
+              <!--<div class="swiper-slide"><img src="./image_2/d945d3f1b34e0081cf8c9eb34def9096.jpg" alt="pic"></div>
               <div class="swiper-slide"><img src="./image_2/94d4681e2ab878c340d441a5c1c7b98a.jpg" alt="pic"></div>
               <div class="swiper-slide"><img src="./image_2/b898562338c7f04ac9b2fa3e5aec8b4c.jpg" alt="pic"></div>
-              <div class="swiper-slide"><img src="./image_2/94d4681e2ab878c340d441a5c1c7b98a.jpg" alt="pic"></div>
+              <div class="swiper-slide"><img src="./image_2/94d4681e2ab878c340d441a5c1c7b98a.jpg" alt="pic"></div>-->
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -249,31 +251,48 @@
     },
 
     mounted(){
-      new Swiper(this.$refs.nav, {
-        slidesPerView: 4,
-        spaceBetween:5,
-      });
-      /*banner*/
-      new Swiper(this.$refs.ban, {
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 1500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        }
-      });
+
       /*banner1*/
       new Swiper(this.$refs.ban1, {
         slidesPerView: 3.5,
         spaceBetween:1,
       });
+      // 导航条
+      this.$store.dispatch('getHomepage',()=>{
+        this.$nextTick(()=>{
+          if(!this.nav){
+            const nav = new Swiper(this.$refs.nav, {
+              slidesPerView: 5,
+              spaceBetween:5,
+            });
+          }else{
+            this.nav.refresh()
+          }
 
-      this.$store.dispatch('getHomepage')
+        })
+      })
+      this.$store.dispatch('getHomepage',()=>{
+        this.$nextTick(()=>{
+          if(!this.ban){
+            /*banner*/
+              const ban = new Swiper(this.$refs.ban, {
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  loop: true,
+                  autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                  },
+                  pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                  }
+                });
+          } else {
+              this.ban.refesh()
+          }
+        })
+      })
     },
 
 

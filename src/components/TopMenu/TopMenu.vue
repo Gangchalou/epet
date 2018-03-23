@@ -7,15 +7,15 @@
           <p>首页</p>
         </a>
         <a href="javascript:;">
-          <span class="m2" @click="goto('/msite')" :class="{on:$route.path === '/msite'}"></span>
+          <span class="m2" @click="goto('/class')" :class="{on:$route.path === '/class'}"></span>
           <p>商品分类</p>
         </a>
         <a href="javascript:;">
-          <span class="m3" @click="goto('/msite')" :class="{on:$route.path === '/msite'}"></span>
+          <span class="m3" @click="goto('/shopcart')" :class="{on:$route.path === '/shopcart'}"></span>
           <p>购物车</p>
         </a>
         <a href="javascript:;">
-          <span class="m4" @click="goto('/msite')" :class="{on:$route.path === '/msite'}"></span>
+          <span class="m4" @click="goto('/profile')" :class="{on:$route.path === '/profile'}"></span>
           <p>我的E宠</p>
         </a>
       </div>
